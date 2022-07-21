@@ -1,0 +1,62 @@
+@import "./variables.scss";
+
+.basket{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - $basket-footer-height);
+
+    &__title{
+        margin: 1rem;
+    }
+
+    &__info-message{
+        margin: 1rem;
+        color: #fff;
+        & > div{
+            padding: 1rem ;
+        }
+
+        &__success {
+            background-color: $success-color;
+        }
+
+        &__error {
+            background-color: $error-color;
+        }
+    }
+
+    &__footer{
+        position: fixed;
+        bottom: 0;
+        left:0;
+        height: $basket-footer-height;
+        width: 100%;
+        border-top: 1px solid $border-color;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+
+        display: flex;
+        align-items: center;
+        justify-self: space-evenly;
+        gap: 1rem;
+        padding: 0 1rem;
+
+
+        &__button{
+            width: calc(50% - 1.5rem);
+            outline: none;
+            border: none;
+            padding: .8rem 1rem;
+            text-align: center;
+            cursor: pointer;
+
+            &:nth-child(1){
+                background: $light-gray;
+                color: white;
+            }
+            &:nth-child(2){
+                background: $orange-color;
+                color: white;
+            }
+        }
+    }
+}

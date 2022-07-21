@@ -1,0 +1,62 @@
+@import "./variables.scss";
+
+.basket-item {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    gap: 1rem;
+
+    &__left {
+        &__image {
+            width: 6rem;
+            height: 6rem;
+            margin-right: 0.5rem;
+        }
+
+        &__actions{
+            display: flex;
+            gap: .5rem;
+
+            &__action-button {
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 50%;
+                background-color: transparent;
+                border: 1px solid $border-color-dark;
+            }
+            &__action-input {
+                width: 2rem;
+                background-color: transparent;
+                border: 1px solid $border-color-dark;
+                text-align: center;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex:1;
+
+
+        &__name {
+            color: $light-gray;
+            font-size: .9rem;
+        }
+
+        &__price {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        &__remove__button{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+.product{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $border-color;
+    padding: .5rem;
+
+    &__image{
+        width: 150px;
+        height: 150px;
+    }
+
+    &__name {
+        text-align: center;
+        color: $light-gray;
+    }
+
+    & .row {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__add-basket-button{
+        border: none;
+        outline: none;
+        background-color: $orange-color;
+        color: #fff;
+        font-weight: bold;
+        padding: .5rem;
+        cursor: pointer;
+    }
+}
+
